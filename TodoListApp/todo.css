@@ -1,0 +1,135 @@
+/* Container styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Todo input container */
+.todo-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#content {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+#content:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+#content-btn {
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#content-btn:hover {
+    background-color: #357ab7;
+}
+
+/* Todo list container */
+.todo-list-container {
+    text-align: left;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Completed todo styling */
+.list.completed {
+    text-decoration: line-through;
+    text-decoration-style: dashed;
+    color: #999;
+}
+
+
+.list {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.list .buttons {
+    display: flex;
+}
+
+.todo-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.todo-btn:first-child {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.todo-btn:first-child:hover {
+    background-color: #4cae4c;
+}
+
+.todo-btn:last-child {
+    background-color: #d9534f;
+    color: white;
+}
+
+.todo-btn:last-child:hover {
+    background-color: #c9302c;
+}
+
+.todo-btn:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
